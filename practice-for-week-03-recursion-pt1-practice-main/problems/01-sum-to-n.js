@@ -13,9 +13,24 @@ sumToN(-8)  // returns null
 
 
 function sumToN(n) {
-  // Your code here
+    // return null if n < 0
+  if (n < 0) {
+    return null
+  } else {
+  // for (let i = 0; i <= n; i++) {
+  //   let el = n[i]
+  //   sum += el
+  // }
+  // take in a number and return sum of all numbers from 0 to n
+  return n + sumToN(n - 1)
+  }
+
 }
 
+// console.log(sumToN(5)) // returns 15
+// console.log(sumToN(1))  // returns 1
+// // sumToN(9)  // returns 45
+// sumToN(-8)  // returns null
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

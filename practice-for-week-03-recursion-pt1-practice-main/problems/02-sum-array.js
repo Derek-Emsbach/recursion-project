@@ -9,11 +9,20 @@ sumArray([1, 2, 3]); //  6
 sumArray([0, 1, -3]); //  -2
 sumArray([1, 2, 3, 4, 5]); // 15
 ***********************************************************************/
+//recursive add all elements of array together
 
 function sumArray(arr) {
-  // Your code here
+  if (arr.length < 1) {
+  return 0;
+  }
+  let sum = arr[0] + sumArray(arr.slice(1));
+  return sum
 }
-  
+
+console.log(sumArray([1, 2, 3])); //  6
+console.log(sumArray([0, 1, -3])); //  -2
+console.log(sumArray([1, 2, 3, 4, 5])); // 15
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = sumArray;
