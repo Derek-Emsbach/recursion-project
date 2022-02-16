@@ -11,10 +11,22 @@ iceCreamShop(['cookies n cream', 'blue moon', 'superman', 'honey lavender', 'sea
 iceCreamShop(['moose tracks'], 'moose tracks'); // true
 iceCreamShop([], 'honey lavender'); // false
 ***********************************************************************/
-
-
+// array = flavors
+// target = favorite
+// base case: stop recurse when no more flavors
+// recursive case, if length is not 0
+// recursive step: remove and check if ele is equal to my search value
 function iceCreamShop(flavors, favorite) {
   // Your code here
+  if (flavors.length === 0){
+    return false
+  }
+    if (flavors.pop() === favorite){
+    
+      return true
+    }
+ return iceCreamShop(flavors,favorite)
+    console.log(iceCreamShop)
 }
 
 
